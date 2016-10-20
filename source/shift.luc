@@ -1,0 +1,27 @@
+module shift (
+    input a[8],
+    input b[8],
+    input slct[2],
+    output out[8]
+  ) {
+  sig result[24];
+  
+  always {
+    result=24h00;
+    
+    
+    case(slct){
+    b00:
+    out = a << b[3:0]; //shift left
+    b01:
+    out = a >> b[3:0]; //shift right
+    b11:
+    out = $signed(a)>>>b[3:0]; // arithmetic right shift
+        
+      default:
+      out = a;
+    
+   
+  }
+}
+}

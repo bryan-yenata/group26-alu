@@ -1,0 +1,30 @@
+module boolean (
+    input a[8], // clock
+    input b[8],// reset
+    input slct[3],
+    output out[8]
+  ) {
+
+  always {
+  
+    out=8h00;
+    case(slct){
+    b000:out=a;
+    b001:out=b;
+    b010:out=a&b; //AND
+    b011:out=(~a)|(~b); //NAND using bitwise operator
+    b100:out=a|b; //OR
+    b101:out=(~a)&(~b); //NOR using bitwise operator
+    b110:out=a^b; //XOR
+    b111:out=a~^b; //XNOR
+    
+        
+    
+    default:out=0;}
+ 
+
+    
+    
+  }
+}
+

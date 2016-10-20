@@ -1,0 +1,36 @@
+module compare (
+    input a[8], // clock
+    input b[8],// reset
+    input slct[2],
+    output out[24]
+  ) {
+
+  always {
+    case(slct){
+    b00: if(a==b)
+      out[0]=1;
+     else
+      out[0]=0;
+          
+    b01:if(a<b)
+      out[0]=1;
+     else
+      out[0]=0;
+        
+    b10:if(a>b)
+    out[0]=1;
+     else
+    out[0]=0;
+    default:out=0;
+      }
+    
+    
+   
+   
+      
+  
+
+  
+        
+  }
+}
