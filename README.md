@@ -2,6 +2,6 @@
 ALU using MOJO FPGA by Group 26
 
 By:
-Bryan Yenata
-Chrissandro
+Bryan Yenata,
+Chrissandro,
 Zhou Xuexuan
